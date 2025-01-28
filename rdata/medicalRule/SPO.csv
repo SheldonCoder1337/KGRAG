@@ -1,0 +1,8 @@
+S,P,O,properties
+感冒,常见证候,风寒证,{"confidence": 1.0}
+感冒,常见证候,风热证,{"confidence": 1.0}
+感冒,常见证候,风燥证,{"confidence": 1.0}
+感冒,常见证候,暑湿证,{"confidence": 1.0}
+感冒,常见证候,气虚证,{"confidence": 1.0}
+感冒,常见证候,气阴两虚证,{"confidence": 1.0}
+

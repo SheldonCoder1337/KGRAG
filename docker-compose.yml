@@ -23,10 +23,10 @@ services:
       "-jar",
       "arks-sofaboot-0.0.1-SNAPSHOT-executable.jar",
       '--server.repository.impl.jdbc.host=mysql',
-      '--server.repository.impl.jdbc.password=openspg',
+      '--server.repository.impl.jdbc.password=kgrag',
       '--builder.model.execute.num=5',
-      '--cloudext.graphstore.url=neo4j://neo4j:7687?user=neo4j&password=neo4j@openspg&database=neo4j',
-      '--cloudext.searchengine.url=neo4j://neo4j:7687?user=neo4j&password=neo4j@openspg&database=neo4j'
+      '--cloudext.graphstore.url=neo4j://neo4j:7687?user=neo4j&password=neo4j@kgrag&database=neo4j',
+      '--cloudext.searchengine.url=neo4j://neo4j:7687?user=neo4j&password=neo4j@kgrag&database=neo4j'
     ]
 
   mysql:
@@ -38,8 +38,8 @@ services:
     environment:
       TZ: Asia/Shanghai
       LANG: C.UTF-8
-      MYSQL_ROOT_PASSWORD: openspg
-      MYSQL_DATABASE: openspg
+      MYSQL_ROOT_PASSWORD: kgrag
+      MYSQL_DATABASE: kgrag
     ports:
       - "3306:3306"
     command: [
@@ -56,7 +56,7 @@ services:
       - "7687:7687"
     environment:
       - TZ=Asia/Shanghai
-      - NEO4J_AUTH=neo4j/neo4j@openspg
+      - NEO4J_AUTH=neo4j/neo4j@kgrag
       - NEO4J_PLUGINS=["apoc"]
       - NEO4J_server_memory_heap_initial__size=1G
       - NEO4J_server_memory_heap_max__size=4G
@@ -76,7 +76,7 @@ services:
     restart: always
     environment:
       MINIO_ACCESS_KEY: minio
-      MINIO_SECRET_KEY: minio@openspg
+      MINIO_SECRET_KEY: minio@kgrag
       TZ: Asia/Shanghai
     ports:
       - 9000:9000

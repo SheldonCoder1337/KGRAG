@@ -1,0 +1,50 @@
+namespace Medicine
+
+HumanBodyPart(人体部位): ConceptType
+     hypernymPredicate: isA  
+Efficacy(功效): ConceptType
+     hypernymPredicate: isA
+Chunk(文本块): EntityType
+     properties:
+        content(内容): Text
+          index: TextAndVector
+Literature(文献): EntityType
+    properties:
+        author(作者): Text
+        title(标题): Text
+Herbs(中药材): EntityType
+Treatment(治法): EntityType
+    properties:
+        desc(描述): Text
+        alias(别称): Text
+Prescription(处方): EntityType
+    properties:
+        efficiency(功效): Efficacy
+        resource(来源): Literature
+        composition(组成): Herbs
+            constraint: MultiValue
+        treatment(治法): Treatment
+            constraint: MultiValue
+Symptom(症状): EntityType
+     properties:
+        desc(描述): Text
+            index: Text
+        semanticType(语义类型): Text
+            index: Text
+Syndrome(证候): EntityType
+    properties:
+        desc(描述): Text
+            index: Text
+        commonSymptom(常见症状): Symptom
+            constraint: MultiValue
+        treatment(治法): Treatment
+            constraint: MultiValue
+Disease(疾病): EntityType
+    properties:
+        diseaseSite(发病部位): HumanBodyPart
+                constraint: MultiValue
+        typicalSymptom(典型症状): Symptom
+            constraint: MultiValue
+        commonSyndrome(常见证候): Syndrome
+            constraint: MultiValue
+        
