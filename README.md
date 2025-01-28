@@ -1,8 +1,3 @@
----
-author: Jiale Cai
-date: 2025-01-27
----
-
 # Repository File Description
 
 - **kag**: Main logic code
@@ -16,6 +11,5 @@ date: 2025-01-27
     - **CCMR**: Chinese clinical medical Reasoning, effective multi-round tracking of medical records
     - **CMSD**: Chinese medical syndrome differentiation.
     - **clinicalQa**: TCM question-answering dataset, Short dialogue for diagnosis.
-  - **medicalRule**: Sample TCM rule data. The complete version will be updated later.
-    - - **termsDictionary**: TCM entity dictionary.
-  - **tcmCorpus**: TCM knowledge corpus.
+  - **medicalRule**: Sample TCM rule data. *The complete version will be updated later.*
+    - **termsDictionary**: TCM entity dictionary.
